@@ -1,0 +1,104 @@
+.blog-section {
+  background-color: #0c0c0c;
+  color: white;
+  padding: 60px 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.blog-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 0px 20px;
+}
+
+.blog-header a {
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: underline;
+}
+
+.blog-card {
+  display: flex;
+  align-items: center;
+  background-color: #111;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.blog-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.blog-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.blog-date {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.blog-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.blog-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.blog-tags span {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+}
+
+.read-btn {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .blog-section {
+    padding: 40px 20px;
+  }
+
+  .blog-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .read-btn {
+    align-self: flex-end;
+  }
+}

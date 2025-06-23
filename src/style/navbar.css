@@ -1,0 +1,253 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+  padding: 20px 40px;
+  background-color: #0c0c0c;
+  color: white;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 40px; /* Adjust as needed */
+  width: auto;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.links button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 20px;
+  border-radius: 20px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.links .active {
+  background: white;
+  color: black;
+}
+
+.hire {
+  margin-top: 10px;
+}
+
+.hire button {
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* 1440px screen-specific styling */
+@media (min-width: 1440px) {
+  .navbar {
+    padding: 20px 80px;
+  }
+
+  .links {
+    gap: 40px;
+  }
+
+  .links button {
+    font-size: 18px;
+  }
+
+  .hire button {
+    font-size: 16px;
+    padding: 10px 24px;
+  }
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .links {
+    justify-content: flex-start;
+    gap: 15px;
+    margin: 10px 0;
+  }
+
+  .hire {
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .links button {
+    font-size: 14px;
+    padding: 6px 16px;
+  }
+
+  .hire button {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+    .logo img {
+    height: 28px; /* Smaller size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hire {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+    .logo img {
+    height: 28px; /* Smaller size for mobile */
+  }
+}
+
+/* Default: hide menu icon, show links */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* 768px to 1024px - keep items inline */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+  }
+
+  .links {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hire {
+    margin-top: 0;
+  }
+
+  .menu-icon {
+    display: none; /* hide hamburger */
+  }
+}
+
+/* Mobile view - below 768px */
+@media (max-width: 767px) {
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+  }
+
+  .links,
+  .hire {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .links.open,
+  .hire.open {
+    display: flex;
+  }
+
+  .links button {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .hire {
+    justify-content: flex-start;
+  }
+
+  .hire button {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-icon {
+    display: block;
+    margin-left: auto;
+    position: absolute;
+    top: 20px;         /* 👈 Adjust this to move it upward */
+    right: 20px;       /* 👈 Keep it aligned to the right */
+    z-index: 10;
+  }
+
+  .navbar {
+    position: relative; /* Needed for absolute child */
+  }
+
+  .links,
+  .hire {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 60px; /* Give space below menu icon */
+  }
+
+  .links.open,
+  .hire.open {
+    display: flex;
+  }
+
+  .links button {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .hire {
+    justify-content: flex-start;
+  }
+
+  .hire button {
+    width: fit-content;
+  }
+}

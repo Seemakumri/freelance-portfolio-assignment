@@ -1,0 +1,174 @@
+.works {
+  background-color: #0c0c0c;
+  color: white;
+  padding: 60px 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.work-image-wrapper {
+  padding: 20px; /* Controls space around the image */
+  box-sizing: border-box;
+}
+
+.work-image {
+  width: 100%;
+  max-width: 460px; /* Adjust if needed */
+  object-fit: cover;
+  border-radius: 10px; /* Optional: to match card rounding */
+}
+
+.works-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0px 20px;
+}
+
+.works-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.works-header a {
+  font-size: 14px;
+  color: #ccc;
+   text-decoration: underline; 
+  text-underline-offset: 4px;
+}
+
+
+.work-card {
+  display: flex;
+  background: #CBCBCB7A; 
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.work-image {
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+}
+
+.work-details {
+  flex: 1;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 200px;
+}
+
+.work-text h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.work-text p {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.work-text .tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+
+.tags span {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+  border: 1px solid #ccc;
+}
+
+.work-details button {
+  padding: 8px 16px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 14px;
+  margin-bottom: auto; 
+}
+
+/* Tablet / Medium screen */
+@media (max-width: 1024px) {
+  .works {
+    padding: 50px 30px;
+  }
+
+  .work-details h3 {
+    font-size: 20px;
+  }
+
+  .work-details p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile / Small screen */
+@media (max-width: 768px) {
+  .work-card {
+    flex-direction: column;
+  }
+
+  .work-image {
+    width: 100%;
+  }
+
+  .work-details {
+    padding: 16px;
+    gap: 30px; /* Reduce gap for mobile */
+  }
+
+  .work-details h3 {
+    font-size: 18px;
+  }
+
+  .work-details p {
+    font-size: 13px;
+  }
+
+  .works {
+    padding: 40px 20px;
+  }
+
+  .works-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+
+/* Specific styling for 1440px wide screens */
+@media (min-width: 1400px) and (max-width: 1480px) {
+  .works {
+    padding: 60px 80px;
+  }
+
+  .work-card {
+    gap: 40px;
+  }
+
+  .work-details h3 {
+    font-size: 24px;
+  }
+
+  .work-details p {
+    font-size: 15px;
+  }
+}
